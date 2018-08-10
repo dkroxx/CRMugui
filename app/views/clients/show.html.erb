@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Informacion de cliente</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="img">        
+      </div>
+        <div class="container-fluid">
+            <div class="navbar-header">               
+                <img src="https://scontent.feoh3-1.fna.fbcdn.net/v/t1.0-1/13607011_1239909199382700_332108049182655267_n.png?_nc_cat=0&oh=5f359f71a0a1eaf25a947c085f584786&oe=5C11C923" height="60px" width="60px" style="position: relative; left: 104%;">
+                <a class="navbar-brand" href="" style="position: relative; right: 101%; top: 18px;">CRMugui | Información del cliente</a>
+            </div>
+        </div>
+    </nav>   
+
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Editar', edit_client_path(@client) %> | 
+<%= link_to 'Atras', clients_path %>
+<br />
+<br />
+
+<p>
+  <strong>Cédula:</strong>
+  <%= @client.NIT %>
+</p>
+
+<p>
+  <strong>Compañia:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @client.contact_name %>
+</p>
+
+<p>
+  <strong>Teléfono principal:</strong>
+  <%= @client.phone_number %>
+</p>
+
+<p>
+  <strong>Teléfono secundario:</strong>
+  <%= @client.invoice_email %>
+</p>
+
+<p>
+  <strong>Correo electrónico:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Comentarios:</strong>
+  <%= @client.invoice_contact %>
+</p>
+
+</body>
+</html>
+

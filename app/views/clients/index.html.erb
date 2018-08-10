@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clientes registradoss</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="img">        
+      </div>
+        <div class="container-fluid">
+            <div class="navbar-header">               
+                <img src="https://scontent.feoh3-1.fna.fbcdn.net/v/t1.0-1/13607011_1239909199382700_332108049182655267_n.png?_nc_cat=0&oh=5f359f71a0a1eaf25a947c085f584786&oe=5C11C923" height="60px" width="60px" style="position: relative; left: 119%;">
+                <a class="navbar-brand" href="" style="position: relative; right: 115%; top: 18px;">CRMugui | Cliente registrados</a>
+            </div>
+        </div>
+    </nav>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Agregar', new_client_path %>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Cédula</th>
+          <th scope="col">Compañia</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Teléfono principal</th>
+          <th scope="col">Correo electrónico</th>
+          <th scope="col" colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @clients.each do |client| %>
+          <tr>
+            <td><%= client.NIT %></td>
+            <td><%= client.name %></td> 
+            <td><%= client.contact_name %></td>               
+            <td><%= client.phone_number %></td>        
+            <td><%= client.email %></td>        
+            <td><%= link_to 'Ver', client %></td>
+            <td><%= link_to 'Editar', edit_client_path(client) %></td>
+            <td><%= link_to 'Eliminar', client, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+</body>
+</html>

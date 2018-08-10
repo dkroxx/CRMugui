@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de clientes</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>	
+<nav class="navbar navbar-inverse">
+    <div class="img">        
+      </div>
+        <div class="container-fluid">
+            <div class="navbar-header">               
+                <img src="https://scontent.feoh3-1.fna.fbcdn.net/v/t1.0-1/13607011_1239909199382700_332108049182655267_n.png?_nc_cat=0&oh=5f359f71a0a1eaf25a947c085f584786&oe=5C11C923" height="60px" width="60px" style="position: relative; left: 135%;">
+                <a class="navbar-brand" href="" style="position: relative; right: 131%; top: 18px;">CRMugui | Agregar cliente</a>
+            </div>
+        </div>
+    </nav>
+
+	<%= link_to 'Atras', clients_path %>
+	<br />
+	<br />
+    <%= render 'form', client: @client %>	
+
+</body>
+</html>

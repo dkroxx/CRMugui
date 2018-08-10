@@ -1,0 +1,56 @@
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :Cédula %>
+    <%= form.text_field :NIT, class: "form-control", id: :client_NIT %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Compañia %>
+    <%= form.text_field :name, class: "form-control", id: :client_name %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :Nombre %>
+    <%= form.text_field :contact_name, class: "form-control", id: :client_contact_name %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :'Teléfono principal' %>
+    <%= form.text_field :phone_number, class: "form-control", id: :client_phone_number %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :'Teléfono secundario' %>
+    <%= form.text_field :invoice_email, class: "form-control", id: :client_invoice_email %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :'Correo electrónico' %>
+    <%= form.text_field :email, class: "form-control", id: :client_email %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :'Comentarios' %>
+    <%= form.text_field :invoice_contact, class: "form-control", id: :client_invoice_contact %>
+  </div>
+
+  <div class="actions">
+
+    <%= button_tag(type: 'submit') do %>
+            Guardar
+    <% end %>
+  </div>
+
+<% end %>
